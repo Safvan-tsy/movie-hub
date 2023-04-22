@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = () => {
-    createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
         :root{
             --maxWidth: 1280px;
             --white: #fff;
@@ -40,7 +39,5 @@ const GlobalStyle = () => {
             }
         }
     `
-
-}
 
 export default GlobalStyle;
