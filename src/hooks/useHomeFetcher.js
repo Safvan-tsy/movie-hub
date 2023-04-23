@@ -9,6 +9,7 @@ const initialState ={
 }
 
 export const useMovieFetch = () => {
+    const [searchTerm, setSearchTerm] = useState('');
     const [state, setState] = useState(initialState);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -34,6 +35,6 @@ export const useMovieFetch = () => {
 
     },[])
 
-    return { state, loading, error}
+    return { state, loading, error, setSearchTerm}
 
 }

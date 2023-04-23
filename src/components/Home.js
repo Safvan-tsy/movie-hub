@@ -7,11 +7,12 @@ import HeroImage from './HeroImage/HeroImage';
 import Grid from './Grid/Grid';
 import Thumb from './Thumb/Thumb';
 import Spinner from './Spinner/Spinner';
+import SearchBar from './SearchBar/SearchBar';
 
 import { useMovieFetch } from '../hooks/useHomeFetcher';
 
 const Home = () => {
-    const { state, loading, error } = useMovieFetch()
+    const { state, loading, error, setSearchTerm } = useMovieFetch()
 
     ///console.log(IMAGE_BASE_URL)
 
@@ -25,6 +26,7 @@ const Home = () => {
                 />
                 : null
             }
+            <SearchBar setSearchTerm={setSearchTerm} />
             <Grid header="Popular Movies">
                 {state.results.map(movie => (
                     <Thumb
