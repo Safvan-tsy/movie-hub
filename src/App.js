@@ -1,16 +1,23 @@
 
-import { Fragment } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import GlobalStyle from "./GlobalStyle";
 import Header from "./components/Header/Header";
 import Home from "./components/Home";
+import Movie from "./components/Movie";
+import NoteFound from "./components/NoteFound";
 
 function App() {
   return (
-    <Fragment>
+    <Router>
       <Header />
-      <Home/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/:movieId' element={<Movie/>}/>
+        <Route path='/*' element={<NoteFound/>}/>
+      </Routes>
       <GlobalStyle />
-    </Fragment>
+    </Router>
   );
 }
 
