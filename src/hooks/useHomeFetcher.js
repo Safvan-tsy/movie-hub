@@ -44,5 +44,4 @@ export const useMovieFetch = () => {
     },[isLoadingMore, searchTerm, state.page])
     
     return { state, loading, error, setSearchTerm, searchTerm, setIsLoadingMore}
-
 }
