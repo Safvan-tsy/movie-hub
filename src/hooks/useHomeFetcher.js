@@ -42,5 +42,7 @@ export const useMovieFetch = () => {
         fetchMovies(state.page+1, searchTerm);
         setIsLoadingMore(false);
     },[isLoadingMore, searchTerm, state.page])
+    
     return { state, loading, error, setSearchTerm, searchTerm, setIsLoadingMore}
+
 }
