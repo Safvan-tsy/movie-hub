@@ -14,7 +14,6 @@ import {
       'Content-Type': 'application/json'
     }
   };
-  
   const apiSettings = {
     fetchMovies: async (searchTerm, page) => {
       const endpoint = searchTerm
